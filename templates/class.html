@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class {{ class_id }} - EduSathi</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Edu<span>Sathi</span></div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+        </div>
+    </nav>
+
+    <main class="class-page">
+
+        <header class="page-heading">
+            <span class="page-label">QUALITY EDUCATION</span>
+
+            <h1>Class {{ class_id }}</h1>
+
+            <p class="page-subtitle">
+                Your learning journey starts here
+            </p>
+
+            <div class="heading-divider"></div>
+
+            <p class="page-description">
+                Choose your favourite subject below and explore new concepts
+                at your own pace.
+            </p>
+        </header>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <h2>Mathematics</h2>
+                <p>Learn concepts and solve problems.</p>
+                <a href="/class/{{ class_id }}/subject/mathematics">Explore →</a>
+            </div>
+
+            <div class="course-card">
+                <h2>Science</h2>
+                <p>Explore Physics, Chemistry and Biology.</p>
+                <a href="/class/{{ class_id }}/subject/science">Explore →</a>
+            </div>
+
+            <div class="course-card">
+                <h2>English</h2>
+                <p>Improve grammar and vocabulary.</p>
+                <a href="/class/{{ class_id }}/subject/english">Explore →</a>
+            </div>
+
+            <div class="course-card">
+                <h2>Social Science</h2>
+                <p>Learn History, Geography and Civics.</p>
+                <a href="/class/{{ class_id }}/subject/social-science">Explore →</a>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

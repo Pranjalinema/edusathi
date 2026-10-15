@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSathi - Quiz</title>
+</head>
+<body>
+    <h1>EduSathi - Practice Quiz</h1>
+    <p>Test your understanding of photosynthesis.</p>
+
+    <form id="quizForm">
+        <p>1. What do plants absorb from sunlight?</p>
+        <label><input type="radio" name="q1" value="a"> Oxygen</label><br>
+        <label><input type="radio" name="q1" value="b"> Light energy</label><br>
+        <label><input type="radio" name="q1" value="c"> Soil</label><br>
+
+        <p>2. Which gas do plants absorb during photosynthesis?</p>
+        <label><input type="radio" name="q2" value="a"> Carbon dioxide</label><br>
+        <label><input type="radio" name="q2" value="b"> Oxygen</label><br>
+        <label><input type="radio" name="q2" value="c"> Nitrogen</label><br>
+
+        <p>3. Which part of a plant mainly performs photosynthesis?</p>
+        <label><input type="radio" name="q3" value="a"> Root</label><br>
+        <label><input type="radio" name="q3" value="b"> Flower</label><br>
+        <label><input type="radio" name="q3" value="c"> Leaf</label><br>
+
+        <p>4. What is the green pigment in leaves called?</p>
+        <label><input type="radio" name="q4" value="a"> Chlorophyll</label><br>
+        <label><input type="radio" name="q4" value="b"> Haemoglobin</label><br>
+        <label><input type="radio" name="q4" value="c"> Melanin</label><br>
+
+        <p>5. What food do plants produce during photosynthesis?</p>
+        <label><input type="radio" name="q5" value="a"> Protein only</label><br>
+        <label><input type="radio" name="q5" value="b"> Sugar</label><br>
+        <label><input type="radio" name="q5" value="c"> Salt</label><br>
+
+        <br>
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <h3 id="result"></h3>
+
+    <p><a href="/">Back to Home</a></p>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const answers = {
+                q1: "b",
+                q2: "a",
+                q3: "c",
+                q4: "a",
+                q5: "b"
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                const selected = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (selected && selected.value === answers[question]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("result").textContent =
+                "Your score: " + score + " / 5";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,855 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #4f46e5;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+}
+
+.nav-button {
+    text-decoration: none;
+    background: #4f46e5;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: #eef2ff;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.tagline,
+.section-tag {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4f46e5;
+}
+
+.hero-text {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #5b6472;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #4f46e5;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+/* COURSES */
+
+.courses {
+    padding: 90px 7%;
+    text-align: center;
+    background: white;
+}
+
+.courses h2,
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #6b7280;
+    margin-bottom: 45px;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    width: 190px;
+    padding: 30px 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card h3 {
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.course-card button {
+    border: none;
+    background: #eef2ff;
+    color: #4f46e5;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 90px 20px;
+    text-align: center;
+    background: #eef2ff;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.about h2 {
+    margin-bottom: 25px;
+}
+
+.about p {
+    line-height: 1.8;
+    color: #5b6472;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .course-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.ai-button {
+    display: inline-block;
+    padding: 15px 24px;
+    margin-left: 12px;
+    background-color: white;
+    color: #4f46e5;
+    border: 2px solid #4f46e5;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.ai-button:hover {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* ===== EDUSATHI COLOR & FULL-WIDTH LAYOUT UPDATE ===== */
+
+:root {
+    --primary: #4f46e5;
+    --primary-light: #eef2ff;
+    --blue: #2563eb;
+    --green: #059669;
+    --orange: #d97706;
+    --page-bg: #f5f7ff;
+    --card-bg: #ffffff;
+    --text-main: #172033;
+    --text-muted: #64748b;
+    --card-border: #e2e8f0;
+}
+
+/* Use the full available screen width */
+body {
+    background: var(--page-bg);
+    color: var(--text-main);
+}
+
+main,
+.courses,
+.about {
+    width: 100%;
+}
+
+/* More colorful navbar */
+.navbar {
+    background: #ffffff;
+    border-bottom: 2px solid #e0e7ff;
+    box-shadow: 0 3px 15px rgba(79, 70, 229, 0.06);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-button,
+.main-button {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    transition: 0.25s ease;
+}
+
+.nav-button:hover,
+.main-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.22);
+}
+
+/* Colorful section backgrounds */
+.hero {
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #eff6ff);
+}
+
+.courses {
+    background: #ffffff;
+}
+
+.about {
+    background: linear-gradient(135deg, #eef2ff, #f0fdfa);
+}
+
+/* Course cards: responsive grid */
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.course-card {
+    width: 100%;
+    min-width: 0;
+    background: linear-gradient(160deg, #ffffff, #f8faff);
+    border: 1px solid var(--card-border);
+    border-top: 4px solid var(--primary);
+    border-radius: 16px;
+    padding: 30px 22px;
+    box-shadow: 0 5px 18px rgba(30, 41, 59, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.course-card:nth-child(4n + 2) {
+    border-top-color: var(--blue);
+}
+
+.course-card:nth-child(4n + 3) {
+    border-top-color: var(--green);
+}
+
+.course-card:nth-child(4n + 4) {
+    border-top-color: var(--orange);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.12);
+}
+
+.course-card button {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.course-card button:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+/* Subject, chapter and resource card grids
+   These work when the corresponding HTML uses these classes. */
+.subject-container,
+.chapter-container,
+.resource-container,
+.subject-grid,
+.chapter-grid,
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 25px auto;
+}
+
+.subject-card,
+.chapter-card,
+.resource-card {
+    width: 100%;
+    min-width: 0;
+    padding: 26px;
+    background: linear-gradient(160deg, #ffffff, #f8faff);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(30, 41, 59, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.subject-card {
+    border-top: 4px solid #4f46e5;
+}
+
+.chapter-card {
+    border-top: 4px solid #2563eb;
+}
+
+.resource-card {
+    border-top: 4px solid #059669;
+}
+
+.subject-card:hover,
+.chapter-card:hover,
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(79, 70, 229, 0.12);
+}
+
+/* Keep buttons and links consistent */
+.subject-card a,
+.chapter-card a,
+.resource-card a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Better spacing on smaller screens */
+@media (max-width: 700px) {
+    .courses {
+        padding: 55px 20px;
+    }
+
+    .course-container,
+    .subject-container,
+    .chapter-container,
+    .resource-container,
+    .subject-grid,
+    .chapter-grid,
+    .resource-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .course-card,
+    .subject-card,
+    .chapter-card,
+    .resource-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Cleaner card borders */
+.course-card,
+.subject-card,
+.chapter-card,
+.resource-card {
+    border: 2px solid #d8def5;
+    border-top: 2px solid #d8def5;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 5px 16px rgba(79, 70, 229, 0.07);
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.25s ease;
+}
+
+.course-card:hover,
+.subject-card:hover,
+.chapter-card:hover,
+.resource-card:hover {
+    border-color: #818cf8;
+    box-shadow: 0 10px 24px rgba(79, 70, 229, 0.14);
+    transform: translateY(-4px);
+}
+
+/* Full-screen unavailable page */
+body:has(.unavailable-page) {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #eff6ff);
+}
+
+.unavailable-page {
+    min-height: calc(100vh - 75px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #eef2ff, #f3e8ff);
+}
+
+.unavailable-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 55px 35px;
+    background: #ffffff;
+    border: 2px solid #d8def5;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(79, 70, 229, 0.12);
+}
+
+.unavailable-content h1,
+.unavailable-content h2 {
+    color: #3730a3;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.unavailable-content p {
+    color: #374151;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.unavailable-content a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: #4f46e5;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.unavailable-content a:hover {
+    background: #3730a3;
+}
+
+/* Full-screen unavailable page */
+body:has(.unavailable-page) {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff, #eff6ff);
+}
+
+.unavailable-page {
+    min-height: calc(100vh - 75px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #eef2ff, #f3e8ff);
+}
+
+.unavailable-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 55px 35px;
+    background: #ffffff;
+    border: 2px solid #d8def5;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(79, 70, 229, 0.12);
+}
+
+.unavailable-content h1,
+.unavailable-content h2 {
+    color: #3730a3;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.unavailable-content p {
+    color: #374151;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+.unavailable-content a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: #4f46e5;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.unavailable-content a:hover {
+    background: #3730a3;
+}
+
+/* Thicker, more visible borders for subject and chapter cards */
+
+.subject-card,
+.chapter-card,
+.subject-container .course-card,
+.chapter-container .course-card,
+.subject-grid .course-card,
+.chapter-grid .course-card {
+    border: 10px solid #818cf8 !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.08);
+}
+
+.subject-card:hover,
+.chapter-card:hover,
+.subject-container .course-card:hover,
+.chapter-container .course-card:hover,
+.subject-grid .course-card:hover,
+.chapter-grid .course-card:hover {
+    border-color: #4f46e5 !important;
+    box-shadow: 0 8px 22px rgba(79, 70, 229, 0.18);
+    transform: translateY(-4px);
+}
+
+/* Subject cards on the class page */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+.course-grid .course-card {
+    width: 100%;
+    border: 3px solid #818cf8 !important;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 30px 24px;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.08);
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.25s ease;
+}
+
+.course-grid .course-card:hover {
+    border-color: #4f46e5 !important;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.16);
+    transform: translateY(-4px);
+}
+
+.course-grid .course-card h2 {
+    margin-bottom: 14px;
+    color: #3730a3;
+}
+
+.course-grid .course-card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.course-grid .course-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4f46e5;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+.course-grid .course-card a:hover {
+    background: #3730a3;
+}
+
+/* ===== EDUCATIONAL PAGE HEADERS ===== */
+
+.class-page,
+.subject-page,
+.chapter-page {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    padding: 45px 5%;
+    background: linear-gradient(135deg, #f5f7ff, #eef2ff, #f5f3ff);
+}
+
+/* Main page heading */
+.class-page > h1,
+.subject-page > h1,
+.chapter-page > h1 {
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 800;
+    color: #312e81;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+/* Supporting text */
+.class-page > p,
+.subject-page > p,
+.chapter-page > p {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Subject page heading section */
+.class-page h1,
+.subject-page h1,
+.chapter-page h1 {
+    letter-spacing: -0.5px;
+}
+
+/* Give page content consistent spacing */
+.course-grid,
+.subject-container,
+.chapter-container,
+.subject-grid,
+.chapter-grid {
+    margin-top: 30px;
+}
+
+/* Responsive heading spacing */
+@media (max-width: 700px) {
+    .class-page,
+    .subject-page,
+    .chapter-page {
+        padding: 32px 20px;
+    }
+
+    .class-page > h1,
+    .subject-page > h1,
+    .chapter-page > h1 {
+        font-size: 30px;
+    }
+}
+
+/* ===== POLISHED EDUCATIONAL PAGE HEADINGS ===== */
+
+.class-page {
+    padding: 42px 5%;
+    background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 55%, #f5f3ff 100%);
+    min-height: calc(100vh - 75px);
+}
+
+.page-heading {
+    width: 100%;
+    padding: 32px 36px;
+    margin-bottom: 30px;
+    background: linear-gradient(120deg, #ffffff, #f8f7ff);
+    border: 2px solid #dfe3ff;
+    border-left: 6px solid #4f46e5;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(79, 70, 229, 0.07);
+}
+
+.page-label {
+    display: inline-block;
+    color: #4f46e5;
+    background: #eef2ff;
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 16px;
+}
+
+.page-heading h1 {
+    color: #292568;
+    font-size: clamp(32px, 3.5vw, 46px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: #5b5b9a;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.heading-divider {
+    width: 65px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #a78bfa);
+    border-radius: 5px;
+    margin-bottom: 18px;
+}
+
+.page-description {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+    .class-page {
+        padding: 25px 18px;
+    }
+
+    .page-heading {
+        padding: 25px 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+}
+
+/* Entire class card is clickable */
+.class-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.class-card h2 {
+    color: #3730a3;
+}
+
+.class-card .card-action {
+    display: inline-block;
+    margin-top: 8px;
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.class-card:hover .card-action {
+    color: #3730a3;
+}
+
+.class-card:focus-visible {
+    outline: 3px solid #4f46e5;
+    outline-offset: 4px;
+}
+
+/* Make class cards fully clickable */
+a.course-card.class-card {
+    display: block;
+    width: 100%;
+    color: #172033;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.course-card.class-card h2,
+a.course-card.class-card p {
+    pointer-events: none;
+}
+
+a.course-card.class-card .card-action {
+    display: inline-block;
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+a.course-card.class-card:hover {
+    border-color: #4f46e5 !important;
+    transform: translateY(-5px);
+}

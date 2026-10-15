@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Coming Soon - EduSathi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Edu<span>Sathi</span></div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/class/{{ class_id }}">Class {{ class_id }}</a>
+            <a href="/class/{{ class_id }}/subject/{{ subject_name }}">
+                {{ subject_name|replace('-', ' ')|title }}
+            </a>
+        </div>
+    </nav>
+
+    <main class="unavailable-page">
+        <div class="unavailable-content">
+            <h1>Chapter {{ chapter_id }}</h1>
+
+            <h2>{{ message }}</h2>
+
+            <p>
+                We're working on making this learning resource available.
+                Please check back soon!
+            </p>
+
+            <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/{{ chapter_id }}">
+                ← Back to Chapter
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter {{ chapter_id }} - EduSathi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Edu<span>Sathi</span></div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/class/{{ class_id }}">Class {{ class_id }}</a>
+            <a href="/class/{{ class_id }}/subject/{{ subject_name }}">
+                {{ subject_name|replace('-', ' ')|title }}
+            </a>
+        </div>
+    </nav>
+
+    <main class="class-page">
+
+        <header class="page-heading">
+            <span class="page-label">QUALITY EDUCATION</span>
+
+            <h1>Chapter {{ chapter_id }}</h1>
+
+            <p class="page-subtitle">
+                {{ subject_name|replace('-', ' ')|title }} · Class {{ class_id }}
+            </p>
+
+            <div class="heading-divider"></div>
+
+            <p class="page-description">
+                Choose how you want to learn this chapter. Explore video lessons,
+                revise with notes, or test your knowledge with a quiz.
+            </p>
+        </header>
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <h2>Video Lecture</h2>
+                <p>Understand concepts through video lessons.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/{{ chapter_id }}/video">
+                    View Lectures →
+                </a>
+            </div>
+
+            <div class="course-card">
+                <h2>Notes</h2>
+                <p>Read and revise important concepts.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/{{ chapter_id }}/notes">
+                    View Notes →
+                </a>
+            </div>
+
+            <div class="course-card">
+                <h2>Quiz</h2>
+                <p>Test your understanding of the chapter.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/{{ chapter_id }}/quiz">
+                    Start Quiz →
+                </a>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>

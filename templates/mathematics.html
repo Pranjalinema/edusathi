@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ subject_name|replace('-', ' ')|title }} - Class {{ class_id }} - EduSathi</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EduSathi</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/courses">Courses</a>
+            <a href="/class/{{ class_id }}">Class {{ class_id }}</a>
+        </div>
+    </nav>
+
+
+    <section class="class-page">
+
+        <header class="page-heading">
+            <span class="page-label">QUALITY EDUCATION</span>
+
+            <h1>{{ subject_name|replace('-', ' ')|title }}</h1>
+
+            <p class="page-subtitle">Class {{ class_id }} · Your learning journey starts here</p>
+
+            <div class="heading-divider"></div>
+
+            <p class="page-description">
+                Choose a chapter below and explore new concepts at your own pace.
+            </p>
+        </header>
+
+
+        <div class="course-grid">
+
+            <div class="course-card">
+                <h2>Chapter 1</h2>
+                <p>Learn the basic concepts of this chapter.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/1">Start Learning →</a>
+            </div>
+
+            <div class="course-card">
+                <h2>Chapter 2</h2>
+                <p>Explore important concepts and examples.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/2">Start Learning →</a>
+            </div>
+
+            <div class="course-card">
+                <h2>Chapter 3</h2>
+                <p>Practice concepts and solve questions.</p>
+                <a href="/class/{{ class_id }}/subject/{{ subject_name }}/chapter/3">Start Learning →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
